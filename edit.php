@@ -47,4 +47,4 @@ if (isset($_POST['update'])) {
     </div>
   </div>
 </div>
-<?php include('includes/footer.php'); ?>
+<?php include('includes/footer.php'); ///otro comentario ?>
