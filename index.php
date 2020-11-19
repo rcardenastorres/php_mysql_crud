@@ -1,9 +1,16 @@
+
+
+
 <?php include("db.php"); ?>
 
 <?php include('includes/header.php'); ?>
 
-
-
+<?php
+if(!isset($_SESSION['usuario'])){
+  header('Location: index.html');
+exit();
+}
+?>
    
             
         
@@ -37,7 +44,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <?php session_unset(); } ?>
+      <?php unset($_SESSION['message']); 
+          } 
+        ?>
 
       <!-- ADD TASK FORM -->
       <div class="card card-body">

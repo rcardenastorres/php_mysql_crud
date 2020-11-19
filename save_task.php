@@ -6,8 +6,9 @@ if (isset($_POST['save_task'])) {
   $title = $_POST['title'];
   $description = $_POST['description'];
   $persona_id = $_POST['persona_id'];
+  $usuario = $_SESSION['usuario'];
   
-  $query = "INSERT INTO task(title, description, persona_id) VALUES ('$title', '$description', $persona_id)";
+  $query = "INSERT INTO task(title, description, persona_id, usuario_id) VALUES ('$title', '$description', '$persona_id', '$usuario')";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");
@@ -18,5 +19,5 @@ if (isset($_POST['save_task'])) {
   header('Location: index.php');
 
 }
-//comantario
+
 ?>
